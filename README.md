@@ -67,11 +67,12 @@
 - **Accents:** 大胆な余白（サヴィル・ロウの仕立て）、セクションを区切るゴールドの細線。
 
 ## 🛠 技術スタック (Tech Stack)
-- **Framework:** Next.js (App Router)
-- **Styling:** Tailwind CSS
+- **Framework:** Next.js 16 (App Router / Turbopack)
+- **Core Library:** React 19
+- **Styling:** Tailwind CSS v4
+- **Components:** Shadcn UI (Radix UI) & Custom Web Components (Vanilla JS)
 - **Icons:** Lucide React
-- **Components:** Shadcn UI
-- **Deployment:** Cloudflare Pages (自動プッシュ)
+- **Deployment:** Cloudflare Pages (Wrangler / Auto Push)
 
 ## 📐 サイト構造 & ビジュアル計画 (Structure & Visuals)
 - **Header & Footer:** パルフェクリニック本家のものを再現

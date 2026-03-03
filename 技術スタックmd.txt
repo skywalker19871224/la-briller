@@ -3,10 +3,12 @@
 ① 技術スタック（迷いを断つ）
 Markdown
 ## Tech Stack
-- Framework: Next.js (App Router)
-- Styling: Tailwind CSS
+- Framework: Next.js 16 (App Router / Turbopack)
+- Core: React 19
+- Styling: Tailwind CSS v4
+- Components: Shadcn UI (自動でnpx shadcn-ui@latest add ... を実行して良い) & Vanilla JS
 - Icons: Lucide React
-- Components: Shadcn UI (自動でnpx shadcn-ui@latest add ... を実行して良い)
+- Deployment: Cloudflare Pages
 
 ② サイト構造と画像計画（「一生」を決める部分）
 Markdown

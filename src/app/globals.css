@@ -9,8 +9,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  
+
   --color-parfait-white: var(--parfait-white);
+  --color-parfait-blue: var(--parfait-blue);
   --color-labriller-blue: var(--labriller-blue);
   --color-gold: var(--gold);
 
@@ -54,9 +55,16 @@
 
 :root {
   --radius: 0.5rem;
-  --background: #FCFCFC; /* Parfait White */
+  --background: #FCFCFC;
+  /* Parfait White */
   --foreground: #1A1A1A;
   --parfait-white: #FCFCFC;
+  --parfait-blue: #7aaec8;
+  --parfait-bg-light: #E6F2F5;
+  --parfait-cta-blue: #2F5672;
+  --parfait-cta-dark: #333333;
+  --parfait-cta-orange: #C8461F;
+  --parfait-cta-green: #3CB34A;
   --labriller-blue: #005BAC;
   --gold: #D4AF37;
 
@@ -64,25 +72,27 @@
   --card-foreground: #1A1A1A;
   --popover: #FCFCFC;
   --popover-foreground: #1A1A1A;
-  --primary: #005BAC; /* La Briller Blue */
+  --primary: #005BAC;
+  /* La Briller Blue */
   --primary-foreground: #FFFFFF;
   --secondary: #F3F4F6;
   --secondary-foreground: #1A1A1A;
   --muted: #F3F4F6;
   --muted-foreground: #6B7280;
-  --accent: #D4AF37; /* Champagne Gold */
+  --accent: #D4AF37;
+  /* Champagne Gold */
   --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
   --border: #E5E7EB;
   --input: #E5E7EB;
   --ring: #005BAC;
-  
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  
+
   --sidebar: #FFFFFF;
   --sidebar-foreground: #1A1A1A;
   --sidebar-primary: #005BAC;
@@ -118,6 +128,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -129,9 +140,10 @@
     background: rgba(252, 252, 252, 0.7);
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.1); /* Subtle Gold border */
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    /* Subtle Gold border */
   }
-  
+
   .dark .glass-header {
     background: rgba(10, 10, 10, 0.7);
     border-bottom: 1px solid rgba(212, 175, 55, 0.2);

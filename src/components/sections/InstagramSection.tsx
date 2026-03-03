@@ -15,7 +15,7 @@ const igPosts = [
 
 export const InstagramSection = () => {
     return (
-        <section className="py-16 md:py-24 bg-white border-t border-gray-100">
+        <section className="pt-16 md:pt-24 pb-8 md:pb-8 bg-white border-t border-gray-100">
             <div className="container mx-auto px-4 max-w-5xl">
 
                 {/* IG Profile Header - Refined Horizontal Layout */}

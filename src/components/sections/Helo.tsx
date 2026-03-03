@@ -29,9 +29,9 @@ export const Helo = () => {
                     </div>
 
                     <p className="text-sm md:text-lg text-white font-light leading-relaxed mb-10 max-w-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">
-                        パルフェクリニックの「最高のおもてなし」と、<br className="hidden md:block" />
-                        La Brillerが実現する「世界初・0.04mmの技術力」。<br className="hidden md:block" />
-                        二つの頂点が交わり、今、セレブリティのための審美歯科が完成しました。
+                        大切な天然歯を守り抜くこと。それがパルフェクリニックの誠実さ。<br className="hidden md:block" />
+                        世界初、PuSL技術が実現した圧倒的な透明感と強靭さ。<br className="hidden md:block" />
+                        最短2回の通院で、あなたは新しい自分と出逢うことになります。
                     </p>
 
                     <div className="flex animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700">

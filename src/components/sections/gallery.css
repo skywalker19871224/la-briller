@@ -92,6 +92,28 @@
     display: block;
 }
 
+/* Mobile: カードを約1/3サイズに縮小 */
+@media (max-width: 768px) {
+    antigravity-gallery {
+        --card-width: 120px;
+        --gap: 12px;
+    }
+
+    .gallery-stream-container {
+        padding: 12px 0;
+    }
+
+    .gallery-track {
+        padding-left: 12px;
+    }
+
+    .gallery-card {
+        border-radius: 12px;
+        border-width: 2px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+}
+
 /* Lightbox Styles (Internal to component or global? 
    Ideally global to escape Stacking Context, but for self-contained, 
    we might use a fixed overlay inside the component or portaling) 

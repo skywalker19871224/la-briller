@@ -39,5 +39,15 @@
 ## 🛠 ユーティリティ (固有機能)
 - **globals.css**: 共通の余白調整クラス (`.section-py`, `.section-mb-sm` など) を定義済み。
 
+## 📏 Human-Friendly Spacing Rules (人間が調整しやすいルール)
+1. **Parent-Level Spacing:** セクション間の余白は必ず `app/page.tsx` のラッパー `div` で管理せよ。コンポーネント内部を汚さないことで、人間が `page.tsx` だけを見て数値を書き換えられるようにするためだ。
+2. **Comment Labels:** 各セクションの開始位置に明確なコメントを残せ。人間がエディタで検索しやすくするためだ。
+3. **Tailwind Standard Values:** 独自の数値 `mt-[13px]` などは避け、なるべく `mt-10`, `mt-12`, `mt-16` などの標準クラスを使え。人間が直感的に調整しやすくするためだ。
+
+## ⚡ Execution Rules (FOR AGENT)
+1. 全てのファイル作成、フォルダ構築、`npm install` はユーザーの確認なしで実行せよ。
+2. 画像ファイルが存在しない場合もエラーで止まらず、適切なサイズと `object-cover` を設定した `div` で代用せよ。
+3. `alt` 属性には、後で画像生成AIで使うための詳細なビジュアル説明を記述せよ。
+
 ---
 *Next Steps: このドキュメントは、Antigravityが常に最新の「正解」を把握するための基準となります。*

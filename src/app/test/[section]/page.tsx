@@ -28,43 +28,43 @@ export default async function SectionPreviewPage({ params }: { params: { section
     switch (section) {
         case "helo":
             Component = Helo;
-            title = "Hero Section Preview";
+            title = "hero = ヒーローセクション";
             break;
         case "brand-message":
             Component = BrandMessage;
-            title = "Brand Message Preview";
+            title = "brand-message = ブランドメッセージ";
             break;
         case "what-is-labriller":
             Component = WhatIsLabriller;
-            title = "What is Labriller Preview";
-            break;
-        case "comparison-table":
-            Component = ComparisonTable;
-            title = "Comparison Table Preview";
-            break;
-        case "flow":
-            Component = Flow;
-            title = "Flow Preview";
+            title = "what-is-labriller = ラブリエとは";
             break;
         case "merits":
             Component = Merits;
-            title = "Merits Section Preview";
+            title = "merits = メリット";
+            break;
+        case "comparison-table":
+            Component = ComparisonTable;
+            title = "comparison-table = 比較表";
             break;
         case "instagram":
             Component = InstagramSection;
-            title = "Instagram Section Preview";
+            title = "instagram = 症例";
+            break;
+        case "flow":
+            Component = Flow;
+            title = "flow = 治療の流れ";
             break;
         case "qa":
             Component = QA;
-            title = "QA Section Preview";
+            title = "qa = よくある質問";
             break;
         case "clinic-gallery":
             Component = ClinicGallery;
-            title = "Clinic Gallery Preview";
+            title = "clinic-gallery = クリニックギャラリー";
             break;
         case "access":
             Component = Access;
-            title = "Access Section Preview";
+            title = "access = アクセス・医院案内";
             break;
         default:
             notFound();

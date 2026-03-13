@@ -4,11 +4,13 @@ import { FloatingCTA } from "@/components/FloatingCTA";
 import { Helo } from "@/components/sections/Helo";
 import { BrandMessage } from "@/components/sections/BrandMessage";
 import { Merits } from "@/components/sections/Merits";
+import { Flow } from "@/components/sections/Flow";
 import { InstagramSection } from "@/components/sections/InstagramSection";
 import { QA } from "@/components/sections/QA";
 import { ClinicGallery } from "@/components/sections/ClinicGallery";
 import { Access } from "@/components/sections/Access";
 import { WhatIsLabriller } from "@/components/sections/WhatIsLabriller";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
 
 export default function Home() {
   return (
@@ -22,7 +24,12 @@ export default function Home() {
       <WhatIsLabriller />
 
       <Merits />
+
+      <ComparisonTable />
+      
       <InstagramSection />
+
+      <Flow />
 
       <QA />
 

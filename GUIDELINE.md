@@ -43,6 +43,7 @@
 
 ## 🚀 デプロイ
 - デプロイ先: Cloudflare Pages (`la-briller`)
+- リポジトリ名: `la-briller-s`（`skywalker19871224/la-briller-s`）
 - 出力ディレクトリ: `out`
 - コマンド: `npm run build && npx wrangler pages deploy out --project-name la-briller --commit-dirty=true`
 - **※ 開発中はローカル（localhost:3000）での確認を優先し、頻繁なデプロイは避けること。**

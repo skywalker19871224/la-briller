@@ -1,0 +1,55 @@
+{
+  "updatedAt": "2026-03-13T02:49:51.402Z",
+  "sections": [
+    {
+      "id": "helo",
+      "name": "hero = ヒーローセクション",
+      "note": "最新のキャッチコピーとグラスモルフィズムボタン"
+    },
+    {
+      "id": "brand-message",
+      "name": "brand-message = ブランドメッセージ",
+      "note": "両ブランドの信頼性を伝えるミニマルなメッセージ"
+    },
+    {
+      "id": "what-is-labriller",
+      "name": "what-is-labriller = ラブリエとは",
+      "note": "赤字の強調コピー「世界最薄ジルコニアベニア」"
+    },
+    {
+      "id": "merits",
+      "name": "merits = メリット",
+      "note": "ジルコニアベニアの強度や削らない利点"
+    },
+    {
+      "id": "comparison-table",
+      "name": "comparison-table = 比較表",
+      "note": "他治療との比較テーブル（新規追加）"
+    },
+    {
+      "id": "flow",
+      "name": "flow = 治療の流れ",
+      "note": "ステップ1〜の流れ（新規追加）"
+    },
+    {
+      "id": "qa",
+      "name": "qa = よくある質問",
+      "note": "「ラブリエ」専用のQ&A（更新済み）"
+    },
+    {
+      "id": "instagram",
+      "name": "instagram = 症例",
+      "note": "Instagramと連動した症例グリッド"
+    },
+    {
+      "id": "clinic-gallery",
+      "name": "clinic-gallery = クリニックギャラリー",
+      "note": "院内風景のオートスルーギャラリー"
+    },
+    {
+      "id": "access",
+      "name": "access = アクセス・医院案内",
+      "note": "アイシーブルーの背景と地図・診療時間"
+    }
+  ]
+}

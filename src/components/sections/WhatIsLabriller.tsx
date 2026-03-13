@@ -40,7 +40,7 @@ export const WhatIsLabriller = () => {
         <section
             ref={sectionRef}
             id="what-is-labriller"
-            className="relative mt-[5px] py-16 md:py-24 bg-parfait-blue text-white text-center overflow-hidden"
+            className="relative py-16 md:py-24 bg-parfait-blue text-white text-center overflow-hidden"
         >
             {/* BrandMessageと同じ背景のアニメーションライン */}
             <div className="absolute inset-0 pointer-events-none">

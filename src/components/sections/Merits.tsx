@@ -27,7 +27,7 @@ export const Merits = () => {
 
             <div className="relative container mx-auto px-6">
                 <SectionHeader
-                    en="The 6 Advantages"
+                    en="Features of La Briller"
                     ja="ラブリエの特徴"
                     theme="light"
                     className="mb-16 md:mb-20"

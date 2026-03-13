@@ -36,10 +36,11 @@ const DEFAULT_SECTIONS = [
   { id: "what-is-labriller", name: "what-is-labriller = ラブリエとは", note: "赤字の強調コピー「世界最薄ジルコニアベニア」" },
   { id: "merits", name: "merits = メリット", note: "ジルコニアベニアの強度や削らない利点" },
   { id: "comparison-table", name: "comparison-table = 比較表", note: "他治療との比較テーブル（新規追加）" },
-  { id: "instagram", name: "instagram = 症例", note: "Instagramと連動した症例グリッド" },
+  { id: "cases", name: "cases = 症例紹介", note: "Before/Afterの症例比較グリッド（新規）" },
   { id: "flow", name: "flow = 治療の流れ", note: "ステップ1〜の流れ（新規追加）" },
   { id: "qa", name: "qa = よくある質問", note: "「ラブリエ」専用のQ&A（更新済み）" },
   { id: "clinic-gallery", name: "clinic-gallery = クリニックギャラリー", note: "院内風景のオートスルーギャラリー" },
+  { id: "instagram", name: "instagram = インスタグラム", note: "Instagram公式アカウントのフィード" },
   { id: "access", name: "access = アクセス・医院案内", note: "アイシーブルーの背景と地図・診療時間" },
 ];
 
@@ -62,10 +63,11 @@ const SortableItem = ({ section, editingId, setEditingId, handleRename, itemsCou
   };
 
   return (
-    <div 
-      ref={setNodeRef} 
+    <div
+      ref={setNodeRef}
       style={style}
-      className={`group bg-white border border-slate-200 rounded-xl p-3 shadow-sm hover:shadow-lg transition-all duration-300 relative ${isDragging ? 'shadow-2xl ring-2 ring-blue-400' : ''}`}
+      onClick={() => window.open(`/test/${section.id}`, '_blank')}
+      className={`group bg-white border border-slate-200 rounded-xl p-3 shadow-sm hover:shadow-lg transition-all duration-300 relative cursor-pointer ${isDragging ? 'shadow-2xl ring-2 ring-blue-400' : ''}`}
     >
       <div className="flex items-center gap-3">
         {/* ドラッグハンドル */}
@@ -89,12 +91,12 @@ const SortableItem = ({ section, editingId, setEditingId, handleRename, itemsCou
                   onBlur={() => setEditingId(null)}
                   onKeyDown={(e) => e.key === 'Enter' && setEditingId(null)}
                 />
-                <button onClick={() => setEditingId(null)} className="text-blue-500">
+                <button onClick={(e) => { e.stopPropagation(); setEditingId(null); }} className="text-blue-500">
                   <Check size={16} />
                 </button>
               </div>
             ) : (
-              <div className="flex items-center gap-2 cursor-pointer" onClick={() => setEditingId(section.id)}>
+              <div className="flex items-center gap-2 cursor-pointer" onClick={(e) => { e.stopPropagation(); setEditingId(section.id); }}>
                 <h2 className="text-sm font-bold text-slate-800 group-hover:text-blue-600 truncate">
                   {section.name}
                 </h2>
@@ -108,14 +110,8 @@ const SortableItem = ({ section, editingId, setEditingId, handleRename, itemsCou
             </div>
           </div>
 
-          <div className="shrink-0 flex items-center gap-2">
-            <Link 
-              href={`/test/${section.id}`}
-              className="text-[9px] font-black tracking-widest uppercase bg-slate-50 hover:bg-slate-900 hover:text-white text-slate-400 px-3 py-1.5 rounded-lg border border-slate-100 transition-all flex items-center gap-1.5"
-            >
-              Preview
-              <ExternalLink size={10} />
-            </Link>
+          <div className="shrink-0">
+            <ExternalLink size={14} className="text-slate-200 group-hover:text-slate-400 transition-colors" />
           </div>
         </div>
       </div>
@@ -146,7 +142,16 @@ export default function TestIndex() {
         const saved = localStorage.getItem("labriller-sections-v3");
         if (saved) {
             try {
-                setSections(JSON.parse(saved));
+                const parsed = JSON.parse(saved);
+                // 存在するセクションIDのみにフィルタリング（BrandMessageなどを排除）
+                const validIds = DEFAULT_SECTIONS.map(s => s.id);
+                const filtered = parsed.filter((s: any) => validIds.includes(s.id));
+                
+                // もし新しいセクションがDEFAULTに追加されていたらそれも補充
+                const savedIds = filtered.map((s: any) => s.id);
+                const missing = DEFAULT_SECTIONS.filter(s => !savedIds.includes(s.id));
+                
+                setSections([...filtered, ...missing]);
             } catch (e) {
                 console.error("Failed to load sections", e);
             }

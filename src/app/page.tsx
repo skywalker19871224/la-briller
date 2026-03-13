@@ -10,6 +10,7 @@ import { ClinicGallery } from "@/components/sections/ClinicGallery";
 import { Access } from "@/components/sections/Access";
 import { WhatIsLabriller } from "@/components/sections/WhatIsLabriller";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
+import { CaseStudies } from "@/components/sections/CaseStudies";
 
 export default function Home() {
   return (
@@ -23,14 +24,16 @@ export default function Home() {
       <Merits />
 
       <ComparisonTable />
-      
-      <InstagramSection />
+
+      <CaseStudies />
 
       <Flow />
 
       <QA />
 
       <ClinicGallery />
+
+      <InstagramSection />
 
       <Access />
 

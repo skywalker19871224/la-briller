@@ -9,8 +9,9 @@ import { ClinicGallery } from "@/components/sections/ClinicGallery";
 import { Access } from "@/components/sections/Access";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { Flow } from "@/components/sections/Flow";
+import { CaseStudies } from "@/components/sections/CaseStudies";
 
-const SECTION_IDS = ["helo", "what-is-labriller", "comparison-table", "flow", "merits", "instagram", "qa", "clinic-gallery", "access"];
+const SECTION_IDS = ["helo", "what-is-labriller", "merits", "comparison-table", "flow", "qa", "clinic-gallery", "cases", "instagram", "access"];
 
 export async function generateStaticParams() {
     return SECTION_IDS.map((section) => ({
@@ -41,9 +42,13 @@ export default async function SectionPreviewPage({ params }: { params: { section
             Component = ComparisonTable;
             title = "comparison-table = 比較表";
             break;
+        case "cases":
+            Component = CaseStudies;
+            title = "症例紹介";
+            break;
         case "instagram":
             Component = InstagramSection;
-            title = "instagram = 症例";
+            title = "インスタグラム";
             break;
         case "flow":
             Component = Flow;

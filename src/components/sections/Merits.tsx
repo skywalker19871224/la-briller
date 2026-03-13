@@ -2,15 +2,7 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-
-const merits = [
-    { id: 1, title: <>歯を削らず、<br />貼るだけ</> },
-    { id: 2, title: <>欠けや変形も、<br />隙間補正</> },
-    { id: 3, title: <>通院 <span className="text-2xl font-bold">2</span> 回のみ</> },
-    { id: 4, title: <>紙より薄い<br /><span className="text-[13px]">0.04mmのベニア</span></> },
-    { id: 5, title: <>違和感ゼロの<br />美しさ</> },
-    { id: 6, title: <>色選択<span className="text-xl">可能</span></> },
-];
+import { merits } from "@/content/merits";
 
 export const Merits = () => {
     return (
@@ -30,6 +22,7 @@ export const Merits = () => {
                     en="Features of La Briller"
                     ja="ラブリエの特徴"
                     theme="light"
+                    enColor="text-parfait-blue/80"
                     className="mb-16 md:mb-20"
                 />
 
@@ -58,17 +51,17 @@ export const Merits = () => {
                     </div>
 
                     {/* Sparkle Decorations */}
-                    <div className="absolute top-1/4 -left-4 md:-left-10 text-gold/40 animate-pulse">
+                    <div className="absolute top-1/4 -left-4 md:-left-10 text-parfait-blue/40 animate-pulse">
                         <Sparkles className="w-10 h-10" />
                     </div>
-                    <div className="absolute bottom-1/3 -right-4 md:-right-10 text-gold/40 animate-pulse" style={{ animationDelay: '1.5s' }}>
+                    <div className="absolute bottom-1/3 -right-4 md:-right-10 text-parfait-blue/40 animate-pulse" style={{ animationDelay: '1.5s' }}>
                         <Sparkles className="w-8 h-8 rotate-12" />
                     </div>
                 </div>
 
                 {/* Bottom Message */}
                 <div className="mt-16 text-center">
-                    <div className="w-8 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8" />
+                    <div className="w-8 h-px bg-gradient-to-r from-transparent via-parfait-blue to-transparent mx-auto mb-8" />
                     <p className="text-lg md:text-2xl font-bold text-gray-800 leading-[1.9]">
                         あなたの笑顔に、<br className="md:hidden" />
                         <span className="text-labriller-blue">自信と輝き</span>を。
@@ -85,10 +78,10 @@ export const Merits = () => {
 
             {/* Background Sparkles */}
             <div className="absolute bottom-20 left-10 opacity-20 transform -rotate-12">
-                <Sparkles className="w-16 h-16 text-gold" />
+                <Sparkles className="w-16 h-16 text-parfait-blue" />
             </div>
             <div className="absolute top-20 right-10 opacity-20 transform rotate-45">
-                <Sparkles className="w-12 h-12 text-gold" />
+                <Sparkles className="w-12 h-12 text-parfait-blue" />
             </div>
         </section>
     );

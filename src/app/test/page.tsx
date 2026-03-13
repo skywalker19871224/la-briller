@@ -67,7 +67,7 @@ const SortableItem = ({ section, editingId, setEditingId, handleRename, itemsCou
       ref={setNodeRef}
       style={style}
       onClick={() => window.open(`/test/${section.id}`, '_blank')}
-      className={`group bg-white border border-slate-200 rounded-xl p-3 shadow-sm hover:shadow-lg transition-all duration-300 relative cursor-pointer ${isDragging ? 'shadow-2xl ring-2 ring-blue-400' : ''}`}
+      className={`group bg-slate-900 border border-slate-800 rounded-xl p-3 shadow-sm hover:shadow-lg transition-all duration-300 relative cursor-pointer ${isDragging ? 'shadow-2xl ring-2 ring-blue-400' : ''}`}
     >
       <div className="flex items-center gap-3">
         {/* ドラッグハンドル */}
@@ -224,9 +224,9 @@ export default function TestIndex() {
     if (!mounted) return null;
 
     return (
-        <div className="min-h-screen bg-[#FDFDFD] p-4 md:p-8 font-sans text-slate-900 selection:bg-blue-100">
+        <div className="min-h-screen bg-slate-950 p-4 md:p-8 font-sans text-white selection:bg-blue-500/30">
             <div className="max-w-3xl mx-auto">
-                <header className="mb-8 flex items-end justify-between border-b border-slate-100 pb-6">
+                <header className="mb-8 flex items-end justify-between border-b border-slate-800 pb-6">
                     <div>
                         <div className="flex items-center gap-3 mb-2">
                              <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
@@ -296,7 +296,7 @@ export default function TestIndex() {
                     </DndContext>
                 </nav>
 
-                <div className="mt-12 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                <div className="mt-12 p-4 bg-slate-900/70 rounded-xl border border-slate-800">
                   <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Usage Tip</h3>
                   <p className="text-[11px] text-slate-500 leading-relaxed">
                     並び順を入れ替えてから「構成をコピー」し、そのまま私に送信してください。<br />

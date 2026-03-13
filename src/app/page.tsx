@@ -11,6 +11,7 @@ import { Access } from "@/components/sections/Access";
 import { WhatIsLabriller } from "@/components/sections/WhatIsLabriller";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { CaseStudies } from "@/components/sections/CaseStudies";
+import { PricingTable } from "@/components/sections/PricingTable";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
       <ComparisonTable />
 
       <CaseStudies />
+
+      <PricingTable />
 
       <Flow />
 

@@ -1,4 +1,4 @@
-import { FlowV2 } from "@/components/sections/FlowV2";
+import { FlowV2 } from "@/app/test/legacy/FlowV2";
 
 export default function FlowV2Preview() {
     return (

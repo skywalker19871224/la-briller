@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { SectionHeader } from "@/components/ui/SectionHeader";
+import { TitleBand } from "@/components/ui/TitleBand";
 import { cn } from "@/lib/utils";
 
 const qaData = [
@@ -45,17 +45,7 @@ export const QA = () => {
 
     return (
         <section className="bg-white">
-            {/* Title Band: BrandMessageと対になる水色の帯 */}
-            <div className="bg-parfait-blue py-10 text-center text-white">
-                <div className="container mx-auto px-6">
-                    <SectionHeader
-                        en="Support"
-                        ja="よくある質問"
-                        theme="dark"
-                        className="mb-0"
-                    />
-                </div>
-            </div>
+            <TitleBand en="Support" ja="よくある質問" />
 
             <div className="pt-8 pb-12 container mx-auto px-6 max-w-4xl">
 

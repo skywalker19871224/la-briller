@@ -3,12 +3,13 @@ import Link from "next/link";
 import { Helo } from "@/components/sections/Helo";
 import { BrandMessage } from "@/components/sections/BrandMessage";
 import { Merits } from "@/components/sections/Merits";
+import { WhatIsLabriller } from "@/components/sections/WhatIsLabriller";
 import { InstagramSection } from "@/components/sections/InstagramSection";
 import { QA } from "@/components/sections/QA";
 import { ClinicGallery } from "@/components/sections/ClinicGallery";
 import { Access } from "@/components/sections/Access";
 
-const SECTION_IDS = ["helo", "brand-message", "merits", "instagram", "qa", "clinic-gallery", "access"];
+const SECTION_IDS = ["helo", "brand-message", "what-is-labriller", "merits", "instagram", "qa", "clinic-gallery", "access"];
 
 export async function generateStaticParams() {
     return SECTION_IDS.map((section) => ({
@@ -30,6 +31,10 @@ export default async function SectionPreviewPage({ params }: { params: { section
         case "brand-message":
             Component = BrandMessage;
             title = "Brand Message Preview";
+            break;
+        case "what-is-labriller":
+            Component = WhatIsLabriller;
+            title = "What is Labriller Preview";
             break;
         case "merits":
             Component = Merits;

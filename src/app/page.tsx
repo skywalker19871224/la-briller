@@ -8,6 +8,7 @@ import { InstagramSection } from "@/components/sections/InstagramSection";
 import { QA } from "@/components/sections/QA";
 import { ClinicGallery } from "@/components/sections/ClinicGallery";
 import { Access } from "@/components/sections/Access";
+import { WhatIsLabriller } from "@/components/sections/WhatIsLabriller";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <Helo />
 
       <BrandMessage />
+
+      <WhatIsLabriller />
 
       <Merits />
       <InstagramSection />

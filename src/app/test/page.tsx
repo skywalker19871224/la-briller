@@ -3,6 +3,7 @@ import Link from "next/link";
 const sections = [
     { id: "helo", name: "Hero Section", note: "最新のキャッチコピーとグラスモルフィズムボタンの適用済み" },
     { id: "brand-message", name: "Brand Message", note: "両ブランドの信頼性を伝えるミニマルなメッセージ" },
+    { id: "what-is-labriller", name: "What is Labriller", note: "新セクション：赤字の強調コピーと詳細説明文を追加" },
     { id: "merits", name: "Merits Section", note: "ゴシック体への変更とスクロールアニメーションの調整済み" },
     { id: "instagram", name: "Instagram Section", note: "下部余白の削減と詳細ページへの導線確保" },
     { id: "qa", name: "QA Section", note: "コンバージョンに向けた不安解消項目" },

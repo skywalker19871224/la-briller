@@ -2,7 +2,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { Helo } from "@/components/sections/Helo";
-import { BrandMessage } from "@/components/sections/BrandMessage";
 import { Merits } from "@/components/sections/Merits";
 import { Flow } from "@/components/sections/Flow";
 import { InstagramSection } from "@/components/sections/InstagramSection";
@@ -18,8 +17,6 @@ export default function Home() {
       <Header />
 
       <Helo />
-
-      <BrandMessage />
 
       <WhatIsLabriller />
 

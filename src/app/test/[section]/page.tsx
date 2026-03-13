@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Helo } from "@/components/sections/Helo";
-import { BrandMessage } from "@/components/sections/BrandMessage";
 import { Merits } from "@/components/sections/Merits";
 import { WhatIsLabriller } from "@/components/sections/WhatIsLabriller";
 import { InstagramSection } from "@/components/sections/InstagramSection";
@@ -11,7 +10,7 @@ import { Access } from "@/components/sections/Access";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { Flow } from "@/components/sections/Flow";
 
-const SECTION_IDS = ["helo", "brand-message", "what-is-labriller", "comparison-table", "flow", "merits", "instagram", "qa", "clinic-gallery", "access"];
+const SECTION_IDS = ["helo", "what-is-labriller", "comparison-table", "flow", "merits", "instagram", "qa", "clinic-gallery", "access"];
 
 export async function generateStaticParams() {
     return SECTION_IDS.map((section) => ({
@@ -29,10 +28,6 @@ export default async function SectionPreviewPage({ params }: { params: { section
         case "helo":
             Component = Helo;
             title = "hero = ヒーローセクション";
-            break;
-        case "brand-message":
-            Component = BrandMessage;
-            title = "brand-message = ブランドメッセージ";
             break;
         case "what-is-labriller":
             Component = WhatIsLabriller;

@@ -33,7 +33,6 @@ import { CSS } from '@dnd-kit/utilities';
 // デフォルト設定
 const DEFAULT_SECTIONS = [
   { id: "helo", name: "hero = ヒーローセクション", note: "最新のキャッチコピーとグラスモルフィズムボタン" },
-  { id: "brand-message", name: "brand-message = ブランドメッセージ", note: "両ブランドの信頼性を伝えるミニマルなメッセージ" },
   { id: "what-is-labriller", name: "what-is-labriller = ラブリエとは", note: "赤字の強調コピー「世界最薄ジルコニアベニア」" },
   { id: "merits", name: "merits = メリット", note: "ジルコニアベニアの強度や削らない利点" },
   { id: "comparison-table", name: "comparison-table = 比較表", note: "他治療との比較テーブル（新規追加）" },

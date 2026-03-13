@@ -44,7 +44,7 @@ export const QA = () => {
     };
 
     return (
-        <section className="bg-white">
+        <section className="bg-transparent">
             <TitleBand en="Support" ja="よくある質問" />
 
             <div className="pt-8 pb-12 container mx-auto px-6 max-w-4xl">

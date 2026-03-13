@@ -3,7 +3,7 @@ import { pricingRows } from "@/content/pricing";
 
 export const PricingTable = () => {
   return (
-    <section className="bg-parfait-white" id="pricing">
+    <section className="bg-transparent" id="pricing">
       <TitleBand en="Pricing" ja="料金表" />
 
       <div className="section-py container mx-auto px-6 max-w-4xl">

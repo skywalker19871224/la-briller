@@ -72,7 +72,7 @@ const CaseCard = ({ item }: { item: CaseItem }) => {
 
 export const CaseStudies = () => {
   return (
-    <section className="bg-white" id="cases">
+    <section className="bg-transparent" id="cases">
       <TitleBand en="CASE STUDIES" ja="症例紹介" />
 
       {/* Cases Grid */}

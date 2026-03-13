@@ -8,7 +8,7 @@ import { brandColumns, featureRows } from "@/content/comparison";
 // - Keep a table-like structure by tightening typography and allowing wrapping
 export const ComparisonTableNoScroll = () => {
   return (
-    <section className="bg-white" id="comparison-no-scroll">
+    <section className="bg-transparent" id="comparison-no-scroll">
       <TitleBand en="COMPARISON" ja="比較表" />
 
       <div className="section-py container mx-auto px-0 sm:px-6 max-w-6xl">

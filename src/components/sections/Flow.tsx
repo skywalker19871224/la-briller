@@ -33,7 +33,7 @@ export const Flow = () => {
     }, []);
 
     return (
-        <section className="bg-parfait-white">
+        <section className="bg-transparent">
             <TitleBand en="Treatment Flow" ja="治療の流れ" />
 
             {/* Steps */}

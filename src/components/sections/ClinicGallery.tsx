@@ -33,7 +33,7 @@ export const ClinicGallery = () => {
     }, []);
 
     return (
-        <section className="py-8 bg-[#F9F9FB] overflow-hidden border-t border-gray-100">
+        <section className="py-8 bg-transparent overflow-hidden border-t border-gray-100">
             {/* @ts-ignore */}
             <antigravity-gallery ref={galleryRef} auto-speed="0.3"></antigravity-gallery>
         </section>

@@ -8,8 +8,10 @@ import { InstagramSection } from "@/components/sections/InstagramSection";
 import { QA } from "@/components/sections/QA";
 import { ClinicGallery } from "@/components/sections/ClinicGallery";
 import { Access } from "@/components/sections/Access";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
+import { Flow } from "@/components/sections/Flow";
 
-const SECTION_IDS = ["helo", "brand-message", "what-is-labriller", "merits", "instagram", "qa", "clinic-gallery", "access"];
+const SECTION_IDS = ["helo", "brand-message", "what-is-labriller", "comparison-table", "flow", "merits", "instagram", "qa", "clinic-gallery", "access"];
 
 export async function generateStaticParams() {
     return SECTION_IDS.map((section) => ({
@@ -35,6 +37,14 @@ export default async function SectionPreviewPage({ params }: { params: { section
         case "what-is-labriller":
             Component = WhatIsLabriller;
             title = "What is Labriller Preview";
+            break;
+        case "comparison-table":
+            Component = ComparisonTable;
+            title = "Comparison Table Preview";
+            break;
+        case "flow":
+            Component = Flow;
+            title = "Flow Preview";
             break;
         case "merits":
             Component = Merits;

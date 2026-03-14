@@ -1,25 +1,47 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Calendar } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export const Helo = () => {
     return (
         <section className="relative h-screen flex items-center overflow-hidden">
-            {/* Background Video Overlay */}
-            <div className="absolute inset-0 z-0 bg-black/10">
+            {/* Background Video Overlay - Auto-switching based on orientation */}
+            <div className="absolute inset-0 z-0 bg-black/5">
                 <video
                     autoPlay
                     muted
                     loop
                     playsInline
-                    className="w-full h-full object-cover scale-[1.02]" // わずかに拡大して端の切れを防ぐ
+                    className="w-full h-full object-cover scale-[1.02]"
                 >
-                    <source src="https://nanoism.co.jp//files/libs/2687/202410031717096967.mp4" type="video/mp4" />
+                    {/* PC用 (横型) */}
+                    <source 
+                        src="/assets/movies/hero-main-cm.mp4" 
+                        type="video/mp4" 
+                        media="(orientation: landscape)"
+                    />
+                    {/* スマホ用 (縦型) */}
+                    <source 
+                        src="/assets/movies/hero-portrait.mp4" 
+                        type="video/mp4" 
+                        media="(orientation: portrait)"
+                    />
+                    {/* フォールバック (念のため横型) */}
+                    <source src="/assets/movies/hero-main-cm.mp4" type="video/mp4" />
                 </video>
-                {/* Gradient for Text Readability */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-black/20 to-transparent z-10" />
+                
+                {/* 
+                   PC版のみ表示されるグラデーション。
+                   スマホ版（portrait）では動画の明るさを活かすため非表示 
+                */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-black/20 to-transparent z-10 hidden landscape:block" />
             </div>
 
-            <div className="container mx-auto px-6 relative z-20 h-full flex flex-col justify-end pb-20 md:pb-32">
+            {/* 
+               テキスト・ボタンエリア。
+               landscape:flex で横画面の時のみ表示。
+               portrait:hidden で縦画面の時は非表示（動画を主役にする）。
+            */}
+            <div className="container mx-auto px-6 relative z-20 h-full flex-col justify-end pb-20 md:pb-32 hidden landscape:flex">
                 <div className="max-w-3xl">
                     <div className="flex items-center space-x-3 mb-6 animate-in fade-in slide-in-from-left duration-1000">
                         <div className="h-[1px] w-8 md:w-12 bg-parfait-blue" />
@@ -50,7 +72,17 @@ export const Helo = () => {
                 </div>
             </div>
 
-            {/* Side Branding */}
+            {/* スマホ版（Portrait）専用の最小限ブランディング表記 */}
+            <div className="container mx-auto px-6 relative z-20 h-full flex flex-col justify-end pb-12 landscape:hidden">
+                <div className="flex items-center space-x-3 mb-4 animate-in fade-in duration-1000">
+                    <div className="h-[1px] w-8 bg-parfait-blue" />
+                    <span className="text-parfait-blue font-medium tracking-[0.4em] text-[11px] uppercase drop-shadow-md">
+                        Parfait Clinic × La Briller
+                    </span>
+                </div>
+            </div>
+
+            {/* Side Branding - PC版のみ */}
             <div className="absolute right-0 bottom-0 p-12 hidden lg:block vertical-rl z-20">
                 <p className="text-[10px] text-gray-400 tracking-[0.5em] uppercase font-light">
                     The Art of Precision Dentistry

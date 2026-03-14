@@ -7,9 +7,9 @@ import { merits } from "@/content/merits";
 export const Merits = () => {
     return (
         <section
-            className="relative py-10 md:py-16 overflow-hidden bg-white"
+            className="relative py-10 md:py-16 overflow-hidden bg-white/50"
             style={{
-                backgroundImage: "url('/assets/textures/texture_bg.webp')",
+                backgroundImage: "url('/assets/textures/texture_bg.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "right center",
             }}
